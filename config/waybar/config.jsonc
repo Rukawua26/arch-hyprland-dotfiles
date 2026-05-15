@@ -1,0 +1,39 @@
+{
+    "layer": "top",
+    "position": "top",
+    "height": 34,
+    "spacing": 10,
+    "exclusive": true,
+    "passthrough": false,
+    "reload_style_on_change": true,
+    "modules-left": [
+        "network"
+    ],
+    "modules-center": [
+        "clock"
+    ],
+    "modules-right": [
+        "battery"
+    ],
+    "network": {
+        "format-wifi": "  󰤨  {essid}",
+        "format-ethernet": "  󰈀  ethernet",
+        "format-disconnected": "  󰤭  offline",
+        "tooltip-format": "{ifname} via {gwaddr}",
+        "format-linked": "  󰈀  linked"
+    },
+    "battery": {
+        "states": {
+            "warning": 30,
+            "critical": 15
+        },
+        "format": "  󰁹  {capacity}%",
+        "format-charging": "  󰂄  {capacity}%",
+        "format-plugged": "    ac",
+        "tooltip": false
+    },
+    "clock": {
+        "format": "󰥔  {:%H:%M  |  %d %b}",
+        "tooltip-format": "{:%A, %d de %B de %Y}"
+    }
+}

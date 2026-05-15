@@ -1,0 +1,15 @@
+show=drun
+mode=normal
+anchor=center
+location=center
+prompt=Neon Search...
+filter_rate=100
+allow_markup=true
+no_actions=true
+insensitive=true
+allow_images=true
+image_size=24
+gtk_dark=true
+width=720
+height=520
+term=kitty

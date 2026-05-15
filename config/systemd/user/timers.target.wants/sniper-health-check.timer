@@ -1,1 +1,10 @@
-/home/miguel/.config/systemd/user/sniper-health-check.timer
+[Unit]
+Description=Run Sniper AI health check every 5 minutes
+
+[Timer]
+OnBootSec=2min
+OnUnitActiveSec=5min
+Persistent=true
+
+[Install]
+WantedBy=timers.target

@@ -1,0 +1,118 @@
+{
+  "custom/arch": {
+    "format": "󰣇",
+    "tooltip": true,
+    "tooltip-format": "btw"
+  },
+  "hyprland/workspaces": {
+    "disable-scroll": true,
+    "all-outputs": true,
+    "warp-on-scroll": false,
+    "format": "{name}",
+    "format-icons": {
+      "urgent": "",
+      "active": "",
+      "default": ""
+    }
+  },
+  "hyprland/window": {
+    "max-length": 48,
+    "separate-outputs": true
+  },
+  "idle_inhibitor": {
+    "format": "{icon}",
+    "format-icons": {
+      "activated": "",
+      "deactivated": ""
+    }
+  },
+  "pulseaudio": {
+    "format": "{icon} {volume}%",
+    "format-bluetooth": "{icon} {volume}%  {format_source}",
+    "format-bluetooth-muted": "  {icon}  {format_source}",
+    "format-muted": "󰋐 {format_source}",
+    "format-source": " {volume}%",
+    "format-source-muted": "",
+    "format-icons": {
+      "headphone": "",
+      "hands-free": "",
+      "headset": "",
+      "phone": "",
+      "portable": "",
+      "car": "",
+      "default": ["", "", ""]
+    },
+    "on-click": "pavucontrol"
+  },
+  "network": {
+    "format-wifi": "󰤨 {signalStrength}%",
+    "format-ethernet": "󰈀 {ifname}",
+    "tooltip-format-wifi": "{essid} ({signalStrength}%)",
+    "tooltip-format-ethernet": "{ifname} {ipaddr}/{cidr}",
+    "tooltip-format-disconnected": "Sin red",
+    "format-linked": "󰈀 {ifname}",
+    "format-disconnected": "󰖪",
+    "on-click": "kitty -e nmtui"
+  },
+  "custom/bluetooth": {
+    "format": "{}",
+    "exec": "~/.config/waybar/scripts/bluetooth.sh status",
+    "interval": 5,
+    "return-type": "json",
+    "tooltip": true,
+    "on-click": "~/.config/waybar/scripts/bluetooth.sh menu",
+    "on-click-right": "~/.config/waybar/scripts/bluetooth.sh power",
+    "on-click-middle": "~/.config/waybar/scripts/bluetooth.sh scan"
+  },
+  "custom/network": {
+    "format": "{}",
+    "exec": "~/.config/waybar/scripts/network.sh",
+    "interval": 5,
+    "on-click": "~/.config/waybar/scripts/network.sh menu",
+    "on-click-right": "~/.config/waybar/scripts/network.sh toggle",
+    "on-click-middle": "~/.config/waybar/scripts/network.sh scan",
+    "tooltip": true,
+    "return-type": "json"
+  },
+  "cpu": {
+    "format": "  {usage}%",
+    "tooltip": true
+  },
+  "memory": {
+    "format": "  {}%",
+    "tooltip": true
+  },
+  "temperature": {
+    "interval": 10,
+    "critical-threshold": 100,
+    "format-critical": " {temperatureC}",
+    "format": " {temperatureC}°C"
+  },
+  "hyprland/language": {
+    "format": " {}",
+    "format-en": "EN",
+    "format-es": "ES"
+  },
+  "backlight": {
+    "format": "{icon} {percent}%",
+    "format-icons": ["", "", "", "", "", "", "", "", ""]
+  },
+  "battery": {
+    "states": {
+      "warning": 30,
+      "critical": 15
+    },
+    "format": "{icon} {capacity}% {time}",
+    "format-full": "{icon} {capacity}%",
+    "format-charging": " {capacity}%",
+    "format-plugged": " {capacity}%",
+    "format-alt": "{icon} {capacity}%",
+    "tooltip-format": "{power}W · {capacity}% · {time}",
+    "format-icons": ["", "", "", "", ""]
+  },
+  "clock": {
+    "format": "{:%H:%M}",
+    "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+    "format-alt": "{:%a %d %b %H:%M}"
+  }
+}
