@@ -1,0 +1,105 @@
+* {
+  font-family: "JetBrainsMono Nerd Font", monospace;
+  font-size: 14px;
+}
+
+.control-center,
+.notification-window,
+.floating-notifications {
+  background: transparent;
+}
+
+.control-center {
+  background: rgba(13, 13, 13, 0.9);
+  border: 1px solid rgba(189, 147, 249, 0.58);
+  border-radius: 18px;
+  box-shadow: 0 0 28px rgba(189, 147, 249, 0.25);
+  color: #f5edff;
+}
+
+.widget-title,
+.widget-dnd {
+  margin: 14px 14px 0;
+  padding: 12px 14px;
+  border-radius: 14px;
+  background: rgba(18, 15, 28, 0.9);
+  border: 1px solid rgba(0, 255, 255, 0.24);
+}
+
+.widget-title label {
+  color: #00ffff;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+.widget-title button,
+.widget-dnd switch {
+  background: rgba(27, 21, 40, 0.95);
+  border: 1px solid rgba(189, 147, 249, 0.6);
+  border-radius: 10px;
+  color: #bd93f9;
+  box-shadow: 0 0 12px rgba(0, 255, 255, 0.08);
+}
+
+.widget-dnd label {
+  color: #bd93f9;
+}
+
+.notification-row {
+  outline: none;
+}
+
+.notification-row .notification-background {
+  margin: 10px 12px;
+  padding: 0;
+  border-radius: 16px;
+  background: transparent;
+}
+
+.notification {
+  border-radius: 16px;
+  background: rgba(13, 13, 13, 0.92);
+  border: 1px solid rgba(0, 255, 255, 0.55);
+  box-shadow:
+    inset 0 0 0 1px rgba(189, 147, 249, 0.06),
+    0 0 18px rgba(0, 255, 255, 0.14),
+    0 0 24px rgba(189, 147, 249, 0.16);
+}
+
+.notification-content {
+  padding: 14px;
+}
+
+.summary {
+  color: #00ffff;
+  font-weight: 800;
+}
+
+.body,
+.time,
+.top-action-title {
+  color: #e8deff;
+}
+
+.notification-action,
+.notification-default-action,
+.close-button {
+  background: rgba(23, 18, 34, 0.96);
+  color: #bd93f9;
+  border: 1px solid rgba(189, 147, 249, 0.44);
+  border-radius: 10px;
+}
+
+.notification-action:hover,
+.notification-default-action:hover,
+.close-button:hover,
+.widget-title button:hover {
+  background: rgba(30, 23, 45, 0.98);
+  color: #00ffff;
+  border-color: rgba(0, 255, 255, 0.8);
+}
+
+.notification.critical {
+  border-color: rgba(255, 79, 216, 0.9);
+  box-shadow: 0 0 26px rgba(255, 79, 216, 0.24);
+}

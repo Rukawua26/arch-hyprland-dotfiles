@@ -1,0 +1,3 @@
+#!/bin/bash
+cd ~/Descargas/squashfs-root
+exec ./lm-studio --no-sandbox "$@"

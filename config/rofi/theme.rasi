@@ -1,0 +1,76 @@
+* {
+    bg:                 #0d0d0de6;
+    bg-alt:             #171320f2;
+    fg:                 #f2eaffff;
+    fg-muted:           #bd93f9cc;
+    cyan:               #00ffffff;
+    purple:             #bd93f9ff;
+    border:             #00ffff88;
+    urgent:             #ff4fd8ff;
+
+    background-color:   transparent;
+    text-color:         @fg;
+    border-color:       @border;
+}
+
+window {
+    width: 720px;
+    border: 2px;
+    border-radius: 18px;
+    background-color: @bg;
+}
+
+mainbox {
+    children: [ inputbar, listview ];
+    spacing: 16px;
+    padding: 20px;
+}
+
+inputbar {
+    padding: 14px 18px;
+    border: 1px;
+    border-radius: 14px;
+    border-color: @purple;
+    background-color: @bg-alt;
+}
+
+prompt {
+    text-color: @cyan;
+    margin: 0 12px 0 0;
+}
+
+entry {
+    placeholder: "Neon Search";
+    placeholder-color: @fg-muted;
+}
+
+listview {
+    lines: 8;
+    columns: 1;
+    spacing: 10px;
+    scrollbar: false;
+    fixed-height: true;
+}
+
+element {
+    padding: 14px 16px;
+    border: 1px;
+    border-radius: 14px;
+    border-color: transparent;
+    background-color: rgba(19, 16, 28, 0.75);
+}
+
+element selected {
+    background-color: rgba(32, 24, 48, 0.96);
+    border-color: @cyan;
+    text-color: @cyan;
+}
+
+element-icon {
+    size: 28px;
+    margin: 0 12px 0 0;
+}
+
+element-text {
+    text-color: inherit;
+}

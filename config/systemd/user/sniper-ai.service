@@ -1,0 +1,28 @@
+[Unit]
+Description=Sniper AI Bot Watchdog Service
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+WorkingDirectory=/home/miguel/Pbot-V5ARCH-DEV
+Environment=PYTHONUNBUFFERED=1
+EnvironmentFile=-/home/miguel/Pbot-V5ARCH-DEV/.env
+ExecStartPre=/usr/bin/env bash -lc 'flock -n "/home/miguel/Pbot-V5ARCH-DEV/.sniperai.lock" true || exit 75'
+ExecStart=/home/miguel/Pbot-V5ARCH-DEV/.venv/bin/python main.py
+ExecStop=/usr/bin/env bash -lc 'kill -INT "${MAINPID}" 2>/dev/null || true'
+Restart=on-failure
+RestartPreventExitStatus=75
+RestartSec=10
+KillSignal=SIGINT
+TimeoutStopSec=95
+NoNewPrivileges=true
+LimitNOFILE=65535
+MemoryMax=2G
+OOMPolicy=stop
+PrivateTmp=true
+ProtectSystem=full
+ReadWritePaths=/home/miguel/Pbot-V5ARCH-DEV /dev/shm
+
+[Install]
+WantedBy=default.target

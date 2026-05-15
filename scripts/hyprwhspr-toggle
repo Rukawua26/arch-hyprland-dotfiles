@@ -1,0 +1,2 @@
+#!/bin/bash
+/usr/lib/hyprwhspr/bin/hyprwhspr record toggle

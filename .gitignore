@@ -1,0 +1,16 @@
+# Sensible / cache
+*~
+*.swp
+*.swo
+__pycache__/
+*.pyc
+node_modules/
+.session
+
+# OS
+.DS_Store
+Thumbs.db
+
+# No incluir archivos grandes
+*.iso
+*.img

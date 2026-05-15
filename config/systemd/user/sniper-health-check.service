@@ -1,0 +1,8 @@
+[Unit]
+Description=Sniper AI Health Check
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=oneshot
+ExecStart=/home/miguel/Pbot-V5ARCH-DEV/.venv/bin/python /home/miguel/Pbot-V5ARCH-DEV/tools/health_check.py

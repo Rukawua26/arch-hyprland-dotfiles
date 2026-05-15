@@ -1,0 +1,50 @@
+window,
+dialog,
+messagedialog,
+.background {
+  background-color: #0d0d0d;
+  color: #eee7ff;
+}
+
+button,
+entry,
+spinbutton,
+combobox,
+scale,
+textview,
+treeview.view,
+popover,
+menu,
+headerbar {
+  border-radius: 10px;
+}
+
+button,
+entry,
+spinbutton,
+combobox,
+textview,
+treeview.view,
+headerbar,
+popover,
+menu {
+  background-color: rgba(23, 19, 32, 0.95);
+  color: #eee7ff;
+  border: 1px solid rgba(189, 147, 249, 0.55);
+}
+
+button:hover,
+entry:focus,
+spinbutton:focus,
+combobox:focus {
+  border-color: rgba(0, 255, 255, 0.85);
+  box-shadow: 0 0 8px rgba(0, 255, 255, 0.2);
+}
+
+selection,
+.selection-mode,
+row:selected,
+treeview.view:selected {
+  background-color: rgba(0, 255, 255, 0.2);
+  color: #00ffff;
+}
