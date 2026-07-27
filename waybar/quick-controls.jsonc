@@ -1,0 +1,18 @@
+{
+    "layer": "overlay",
+    "position": "top",
+    "height": 38,
+    "spacing": 6,
+    "exclusive": false,
+    "passthrough": false,
+    "margin-top": 110,
+    "margin-right": 70,
+    "modules-left": [],
+    "modules-center": [],
+    "modules-right": [
+        "hyprland/workspaces"
+    ],
+    "include": [
+        "~/.config/waybar/modules.json"
+    ]
+}

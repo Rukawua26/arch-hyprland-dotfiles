@@ -1,0 +1,20 @@
+{
+    "layer": "overlay",
+    "position": "top",
+    "height": 38,
+    "spacing": 10,
+    "exclusive": false,
+    "passthrough": false,
+    "margin-top": 154,
+    "margin-right": 110,
+    "modules-left": [],
+    "modules-center": [],
+    "modules-right": [
+        "custom/widget-wifi",
+        "custom/widget-bluetooth",
+        "custom/widget-mic"
+    ],
+    "include": [
+        "~/.config/waybar/modules.json"
+    ]
+}

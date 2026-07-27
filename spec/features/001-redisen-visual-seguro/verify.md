@@ -38,11 +38,19 @@ Fecha: 2026-07-26
 - Conectividad interactiva: PASS, click activa/desactiva dictado, click derecho abre Wi-Fi y click medio abre Bluetooth.
 - Workspaces interactivos: PASS, click abre selector 1-10 y scroll cambia workspace anterior/siguiente; se documenta que Waybar no soporta click independiente por simbolo dentro de un unico modulo custom.
 - Warning GTK dark: PASS, `Rose-Pine/gtk-3.0/gtk-dark.css:3213` ahora usa `min-width: 120px`.
+- Barra auxiliar horizontal: PASS, `SUPER+W` abre/cierra una segunda instancia Waybar con workspaces nativos y botones independientes WiFi/BT/Mic.
+- Controles independientes: PASS, WiFi, Bluetooth y Mic quedan en una misma linea como modulos separados con acciones individuales.
+- Workspaces nativos: PASS, la barra auxiliar usa `hyprland/workspaces`, permitiendo click directo por workspace sin perder el layout horizontal.
+- Posicion baja: PASS, barra auxiliar empieza en `y=110` y el panel principal queda debajo para evitar solapes y no estorbar pestanas/controles de ventanas.
+- Sin solape: PASS, barra auxiliar queda en `y=110` y panel principal en `y=158`, dejando visibles workspaces/controles y contenido del panel.
+- Alineacion controles rapidos: PASS, WiFi/BT/Mic se separan en una segunda fila bajo los workspaces con margen derecho ajustado para centrarlos visualmente.
+- Alineacion workspaces: PASS, la fila de workspaces se desplaza para quedar centrada sobre el panel derecho.
 - Validacion post-reinicio: PASS, tras reiniciar no aparece la barra vieja y `SUPER+W` abre el panel correctamente.
 
 ## Flujo final
 
 - `SUPER+W` abre y cierra el panel flotante derecho.
+- `SUPER+W` abre y cierra el panel flotante derecho junto con la barra auxiliar horizontal superior.
 - La barra principal y el launcher Arch no arrancan en el autostart.
 - El panel contiene workspaces compactos, reloj, fecha, calendario y widgets del sistema.
 - Brave conserva el cambio de pestanas; no hay una capa Waybar horizontal bloqueando la zona superior.

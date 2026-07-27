@@ -1,0 +1,93 @@
+* {
+    font-family: "JetBrainsMono Nerd Font", monospace;
+    font-size: 13px;
+    font-weight: 800;
+    border: none;
+    min-height: 0;
+}
+
+window#waybar {
+    background: transparent;
+    color: #f5edff;
+}
+
+#workspaces,
+#custom-widget-wifi,
+#custom-widget-bluetooth,
+#custom-widget-mic {
+    margin: 0 0 0 6px;
+    padding: 5px 9px;
+    border-radius: 999px;
+    background: linear-gradient(180deg, rgba(33, 26, 46, 0.98), rgba(18, 16, 24, 0.98));
+    border: 1px solid rgba(216, 180, 254, 0.22);
+    box-shadow:
+        inset 0 1px 0 rgba(255, 255, 255, 0.04),
+        0 0 14px rgba(189, 147, 249, 0.12);
+}
+
+#workspaces {
+    padding: 4px 7px;
+    background: rgba(27, 30, 42, 0.9);
+    border-color: rgba(174, 185, 245, 0.34);
+}
+
+#workspaces button {
+    min-width: 24px;
+    min-height: 24px;
+    margin: 0 1px;
+    padding: 0;
+    border-radius: 999px;
+    color: #9d91b5;
+    background: transparent;
+}
+
+#workspaces button.active {
+    color: #211b2b;
+    background: #d8b4fe;
+    box-shadow: 0 0 12px rgba(216, 180, 254, 0.3);
+}
+
+#workspaces button.urgent {
+    color: #ffb4c0;
+    background: rgba(255, 85, 85, 0.2);
+}
+
+#custom-widget-wifi {
+    color: #8be9fd;
+    border-color: rgba(0, 255, 255, 0.28);
+}
+
+#custom-widget-bluetooth {
+    color: #bd93f9;
+    border-color: rgba(189, 147, 249, 0.32);
+}
+
+#custom-widget-mic {
+    color: #f1fa8c;
+    border-color: rgba(241, 250, 140, 0.28);
+}
+
+#custom-widget-mic.active {
+    color: #261f31;
+    background: #f1fa8c;
+    border-color: transparent;
+}
+
+#custom-widget-wifi:hover,
+#custom-widget-bluetooth:hover,
+#custom-widget-mic:hover,
+#workspaces:hover {
+    background: linear-gradient(180deg, rgba(58, 48, 76, 0.98), rgba(30, 25, 42, 0.98));
+    border-color: rgba(216, 180, 254, 0.58);
+    box-shadow:
+        0 0 0 1px rgba(216, 180, 254, 0.12),
+        0 0 18px rgba(189, 147, 249, 0.18);
+}
+
+.tooltip {
+    background: rgba(18, 16, 24, 0.98);
+    border: 1px solid rgba(189, 147, 249, 0.42);
+    border-radius: 12px;
+}
+
+.tooltip label { color: #cdd6f4; }
