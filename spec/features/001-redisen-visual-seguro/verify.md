@@ -34,6 +34,7 @@ Fecha: 2026-07-26
 - Calendario multilínea: PASS, el encabezado con flechas ya no renderiza `\\n` literal.
 - Pulido vibrante: PASS, se conservan los bloques compactos y se refuerzan acentos lila/cyan con glow controlado.
 - Iconos vibrantes: PASS, las tarjetas resumidas usan colores diferenciados por metrica/conectividad/control mediante Pango markup.
+- Conectividad unificada: PASS, WiFi, Bluetooth y microfono/dictado quedan en una sola tarjeta horizontal con colores diferenciados.
 - Validacion post-reinicio: PASS, tras reiniciar no aparece la barra vieja y `SUPER+W` abre el panel correctamente.
 
 ## Flujo final

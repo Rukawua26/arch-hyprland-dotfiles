@@ -29,6 +29,13 @@ if command -v bluetoothctl >/dev/null 2>&1; then
     fi
 fi
 
-text="<span foreground=\"#8be9fd\">$wifi</span>    <span foreground=\"#bd93f9\">$bt</span>"
-tooltip="$wifi_tip\n$bt_tip\nClick: Wi-Fi | Click derecho: Bluetooth"
+mic=""
+mic_tip="Dictado apagado"
+if pgrep -f "[n]erd-dictation begin" >/dev/null 2>&1; then
+    mic=""
+    mic_tip="Dictado activo"
+fi
+
+text="<span foreground=\"#8be9fd\">󰤨 WiFi</span>    <span foreground=\"#bd93f9\">$bt BT</span>    <span foreground=\"#f1fa8c\">$mic Mic</span>"
+tooltip="$wifi_tip\n$bt_tip\n$mic_tip\nClick: Wi-Fi | Click derecho: Bluetooth | Click medio: dictado"
 jq -cn --arg text "$text" --arg tooltip "$tooltip" '{text: $text, tooltip: $tooltip}'

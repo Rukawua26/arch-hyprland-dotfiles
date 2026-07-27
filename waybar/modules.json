@@ -174,7 +174,8 @@
     "format": "{text}",
     "tooltip": true,
     "on-click": "~/.config/waybar/scripts/network.sh menu",
-    "on-click-right": "~/.config/waybar/scripts/bluetooth.sh menu"
+    "on-click-right": "~/.config/waybar/scripts/bluetooth.sh menu",
+    "on-click-middle": "~/.config/waybar/scripts/dictation.sh toggle"
   },
   "custom/control-summary": {
     "exec": "~/.config/waybar/scripts/widgets-control-summary.sh",

@@ -17,7 +17,6 @@
         "custom/system-summary",
         "custom/connectivity-summary",
         "custom/control-summary",
-        "custom/dictation",
         "hyprland/language"
     ],
     "modules-center": [],
