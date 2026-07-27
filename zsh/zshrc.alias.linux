@@ -57,6 +57,12 @@ alias clientes="cd ~/dev/clientes"
 alias ve="cd ~/dev/veinte"
 alias musa="cd ~/dev/musa"
 
+# Hermes + OpenCode Stack
+alias hermes="~/.local/bin/hermes"
+alias opencode="~/.opencode/bin/opencode"
+alias hermes-open="hermes --opencode-context"
+alias hermex="hermes --expert"
+
 # kubectl
 alias kveinte="kubectl config use-context do-nyc1-veinte-001"
 alias kbeekprod="kubectl config use-context gke_beek-production_us-west1-a_beek-production"

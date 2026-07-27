@@ -12,3 +12,6 @@ fi
 
 # Load aliases
 source "$CONFIG_PATH/zsh/zshrc.alias"
+
+# Added by LM Studio CLI tool (lms)
+export PATH="$PATH:/home/miguel/.lmstudio/bin"
