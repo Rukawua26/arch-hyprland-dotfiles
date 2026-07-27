@@ -35,6 +35,9 @@ Fecha: 2026-07-26
 - Pulido vibrante: PASS, se conservan los bloques compactos y se refuerzan acentos lila/cyan con glow controlado.
 - Iconos vibrantes: PASS, las tarjetas resumidas usan colores diferenciados por metrica/conectividad/control mediante Pango markup.
 - Conectividad unificada: PASS, WiFi, Bluetooth y microfono/dictado quedan en una sola tarjeta horizontal con colores diferenciados.
+- Conectividad interactiva: PASS, click activa/desactiva dictado, click derecho abre Wi-Fi y click medio abre Bluetooth.
+- Workspaces interactivos: PASS, click abre selector 1-10 y scroll cambia workspace anterior/siguiente; se documenta que Waybar no soporta click independiente por simbolo dentro de un unico modulo custom.
+- Warning GTK dark: PASS, `Rose-Pine/gtk-3.0/gtk-dark.css:3213` ahora usa `min-width: 120px`.
 - Validacion post-reinicio: PASS, tras reiniciar no aparece la barra vieja y `SUPER+W` abre el panel correctamente.
 
 ## Flujo final

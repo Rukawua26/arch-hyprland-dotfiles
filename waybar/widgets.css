@@ -98,6 +98,7 @@ window#waybar {
     color: #9df8ff;
     border-color: rgba(0, 255, 255, 0.34);
     background: linear-gradient(180deg, rgba(20, 34, 44, 0.98), rgba(18, 16, 24, 0.98));
+    letter-spacing: 0.4px;
 }
 #custom-control-summary { color: #f0abfc; border-color: rgba(240, 171, 252, 0.26); }
 

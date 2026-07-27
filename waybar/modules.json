@@ -25,7 +25,10 @@
     "return-type": "json",
     "format": "{text}",
     "tooltip": true,
-    "tooltip-format": "Espacios de trabajo: 1-10"
+    "tooltip-format": "Click: elegir workspace | Scroll: cambiar workspace",
+    "on-click": "~/.config/waybar/scripts/workspace-menu.sh",
+    "on-scroll-up": "hyprctl dispatch workspace e-1",
+    "on-scroll-down": "hyprctl dispatch workspace e+1"
   },
   "hyprland/window": {
     "max-length": 48,
@@ -173,9 +176,9 @@
     "return-type": "json",
     "format": "{text}",
     "tooltip": true,
-    "on-click": "~/.config/waybar/scripts/network.sh menu",
-    "on-click-right": "~/.config/waybar/scripts/bluetooth.sh menu",
-    "on-click-middle": "~/.config/waybar/scripts/dictation.sh toggle"
+    "on-click": "~/.config/waybar/scripts/dictation.sh toggle",
+    "on-click-right": "~/.config/waybar/scripts/network.sh menu",
+    "on-click-middle": "~/.config/waybar/scripts/bluetooth.sh menu"
   },
   "custom/control-summary": {
     "exec": "~/.config/waybar/scripts/widgets-control-summary.sh",

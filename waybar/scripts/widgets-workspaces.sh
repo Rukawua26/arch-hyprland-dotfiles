@@ -20,4 +20,4 @@ for workspace in $(seq 1 10); do
     text="$text$item "
 done
 
-jq -cn --arg text "$text" --arg tooltip "Espacios de trabajo: 1-10" '{text: $text, tooltip: $tooltip}'
+jq -cn --arg text "$text" --arg tooltip "Click: elegir workspace | Scroll: cambiar workspace" '{text: $text, tooltip: $tooltip}'
