@@ -2,18 +2,34 @@
   "custom/arch": {
     "format": "󰣇",
     "tooltip": true,
-    "tooltip-format": "btw"
+    "tooltip-format": "btw",
+    "on-click": "~/.config/waybar/scripts/toggle-widgets.sh"
   },
   "hyprland/workspaces": {
     "disable-scroll": true,
     "all-outputs": true,
     "warp-on-scroll": false,
+    "persistent-workspaces": {
+      "*": 10
+    },
     "format": "{name}",
     "format-icons": {
       "urgent": "",
       "active": "",
       "default": ""
     }
+  },
+  "custom/workspaces": {
+    "exec": "~/.config/waybar/scripts/widgets-workspaces.sh",
+    "interval": 1,
+    "return-type": "json",
+    "format": "{text}",
+    "tooltip": true,
+    "tooltip-format": "Espacios de trabajo: 1-10"
+  },
+  "hyprland/window": {
+    "max-length": 48,
+    "separate-outputs": true
   },
   "idle_inhibitor": {
     "format": "{icon}",
@@ -23,8 +39,8 @@
     }
   },
   "pulseaudio": {
-    "format": "{icon}  {volume}%",
-    "format-bluetooth": "{icon}  {volume}%  {format_source}",
+    "format": "{icon} {volume}%",
+    "format-bluetooth": "{icon} {volume}%  {format_source}",
     "format-bluetooth-muted": "  {icon}  {format_source}",
     "format-muted": "󰋐 {format_source}",
     "format-source": " {volume}%",
@@ -40,12 +56,44 @@
     },
     "on-click": "pavucontrol"
   },
+  "custom/dictation": {
+    "format": "{}",
+    "exec": "~/.config/waybar/scripts/dictation.sh status",
+    "interval": 1,
+    "return-type": "json",
+    "tooltip": true,
+    "on-click": "~/.config/waybar/scripts/dictation.sh toggle",
+    "on-click-right": "~/.config/waybar/scripts/dictation.sh stop"
+  },
   "network": {
-    "format-wifi": "   {essid} ({signalStrength}%)",
-    "format-ethernet": "{ipaddr}/{cidr} ",
-    "tooltip-format": "{ifname} via {gwaddr} ",
-    "format-linked": "{ifname} (No IP) ",
-    "format-disconnected": "Disconnected ⚠"
+    "format-wifi": "󰤨 {signalStrength}%",
+    "format-ethernet": "󰈀 {ifname}",
+    "tooltip-format-wifi": "{essid} ({signalStrength}%)",
+    "tooltip-format-ethernet": "{ifname} {ipaddr}/{cidr}",
+    "tooltip-format-disconnected": "Sin red",
+    "format-linked": "󰈀 {ifname}",
+    "format-disconnected": "󰖪",
+    "on-click": "kitty -e nmtui"
+  },
+  "custom/bluetooth": {
+    "format": "{}",
+    "exec": "~/.config/waybar/scripts/bluetooth.sh status",
+    "interval": 5,
+    "return-type": "json",
+    "tooltip": true,
+    "on-click": "~/.config/waybar/scripts/bluetooth.sh menu",
+    "on-click-right": "~/.config/waybar/scripts/bluetooth.sh power",
+    "on-click-middle": "~/.config/waybar/scripts/bluetooth.sh scan"
+  },
+  "custom/network": {
+    "format": "{}",
+    "exec": "~/.config/waybar/scripts/network.sh",
+    "interval": 5,
+    "on-click": "~/.config/waybar/scripts/network.sh menu",
+    "on-click-right": "~/.config/waybar/scripts/network.sh toggle",
+    "on-click-middle": "~/.config/waybar/scripts/network.sh scan",
+    "tooltip": true,
+    "return-type": "json"
   },
   "cpu": {
     "format": "  {usage}%",
@@ -57,18 +105,17 @@
   },
   "temperature": {
     "interval": 10,
-    "hwmon-path": "/sys/devices/platform/coretemp.0/hwmon/hwmon4/temp1_input",
     "critical-threshold": 100,
     "format-critical": " {temperatureC}",
     "format": " {temperatureC}°C"
   },
   "hyprland/language": {
-    "format": "  {}",
+    "format": " {}",
     "format-en": "EN",
     "format-es": "ES"
   },
   "backlight": {
-    "format": "{percent}% {icon}",
+    "format": "{icon} {percent}%",
     "format-icons": ["", "", "", "", "", "", "", "", ""]
   },
   "battery": {
@@ -76,19 +123,71 @@
       "warning": 30,
       "critical": 15
     },
-    "format": "{icon}  {capacity}%",
-    "format-full": "{icon}  {capacity}%",
-    "format-charging": "  {capacity}%",
-    "format-plugged": "  {capacity}%",
-    "format-alt": "{time}  {icon}",
+    "format": "{icon} {capacity}% {time}",
+    "format-full": "{icon} {capacity}%",
+    "format-charging": " {capacity}%",
+    "format-plugged": " {capacity}%",
+    "format-alt": "{icon} {capacity}%",
+    "tooltip-format": "{power}W · {capacity}% · {time}",
     "format-icons": ["", "", "", "", ""]
   },
-  "battery#bat2": {
-    "bat": "BAT2"
+  "custom/date": {
+    "exec": "date '+%A, %d %B %Y'",
+    "interval": 60,
+    "format": "{}"
+  },
+  "custom/calendar": {
+    "exec": "~/.config/waybar/scripts/widgets-calendar.sh",
+    "interval": 1,
+    "return-type": "json",
+    "format": "{text}"
+    ,"on-click": "~/.config/waybar/scripts/calendar-shift.sh next"
+    ,"on-click-right": "~/.config/waybar/scripts/calendar-shift.sh prev"
+    ,"on-click-middle": "~/.config/waybar/scripts/calendar-shift.sh reset"
+  },
+  "custom/section-system": {
+    "exec": "printf 'System'",
+    "interval": 3600,
+    "format": "{}"
+  },
+  "custom/section-links": {
+    "exec": "printf 'Connectivity'",
+    "interval": 3600,
+    "format": "{}"
+  },
+  "custom/section-controls": {
+    "exec": "printf 'Controls'",
+    "interval": 3600,
+    "format": "{}"
+  },
+  "custom/system-summary": {
+    "exec": "~/.config/waybar/scripts/widgets-system-summary.sh",
+    "interval": 2,
+    "return-type": "json",
+    "format": "{text}",
+    "tooltip": true
+  },
+  "custom/connectivity-summary": {
+    "exec": "~/.config/waybar/scripts/widgets-connectivity-summary.sh",
+    "interval": 5,
+    "return-type": "json",
+    "format": "{text}",
+    "tooltip": true,
+    "on-click": "~/.config/waybar/scripts/network.sh menu",
+    "on-click-right": "~/.config/waybar/scripts/bluetooth.sh menu"
+  },
+  "custom/control-summary": {
+    "exec": "~/.config/waybar/scripts/widgets-control-summary.sh",
+    "interval": 5,
+    "return-type": "json",
+    "format": "{text}",
+    "tooltip": true,
+    "on-click": "pavucontrol"
   },
   "clock": {
-    "format": "{:%H:%M | %e %b} ",
+    "format": "{:%H:%M}",
     "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-    "format-alt": "{:%Y-%m-%d}"
+    "format-alt": "{:%a %d %b %H:%M}",
+    "on-click": "~/.config/waybar/scripts/toggle-widgets.sh"
   }
 }

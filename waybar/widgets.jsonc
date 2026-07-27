@@ -1,0 +1,28 @@
+{
+    "layer": "overlay",
+    "position": "right",
+    "width": 380,
+    "height": 1180,
+    "spacing": 6,
+    "exclusive": false,
+    "passthrough": false,
+    "margin-top": 8,
+    "margin-right": 12,
+    "margin-bottom": 12,
+    "modules-left": [
+        "custom/workspaces",
+        "clock",
+        "custom/date",
+        "custom/calendar",
+        "custom/system-summary",
+        "custom/connectivity-summary",
+        "custom/control-summary",
+        "custom/dictation",
+        "hyprland/language"
+    ],
+    "modules-center": [],
+    "modules-right": [],
+    "include": [
+        "~/.config/waybar/modules.json"
+    ]
+}

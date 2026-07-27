@@ -1,0 +1,28 @@
+* {
+    font-family: "JetBrainsMono Nerd Font", monospace;
+    border: none;
+    min-height: 0;
+}
+
+window#waybar {
+    background: transparent;
+    color: #d8b4fe;
+}
+
+#custom-arch {
+    min-width: 22px;
+    padding: 5px 9px;
+    border: 1px solid rgba(189, 147, 249, 0.32);
+    border-radius: 12px;
+    background: rgba(18, 16, 24, 0.42);
+    color: rgba(216, 180, 254, 0.78);
+    font-size: 16px;
+    box-shadow: 0 0 12px rgba(189, 147, 249, 0.08);
+}
+
+#custom-arch:hover {
+    background: rgba(48, 42, 62, 0.86);
+    border-color: rgba(216, 180, 254, 0.7);
+    color: #f5edff;
+    box-shadow: 0 0 16px rgba(189, 147, 249, 0.2);
+}
