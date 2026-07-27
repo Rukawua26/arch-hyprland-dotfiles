@@ -17,6 +17,6 @@ temp_file=$(ls /sys/class/thermal/thermal_zone*/temp 2>/dev/null | head -n1)
 temp="--"
 [ -n "$temp_file" ] && temp=$(awk '{ printf "%d", $1 / 1000 }' "$temp_file")
 
-text=" ${cpu}%     ${mem}%     ${temp}°C"
+text="<span foreground=\"#f1fa8c\"> ${cpu}%</span>    <span foreground=\"#ffb86c\"> ${mem}%</span>    <span foreground=\"#ff5555\"> ${temp}°C</span>"
 tooltip="CPU ${cpu}%\nMemoria ${mem}%\nTemperatura ${temp}°C"
 jq -cn --arg text "$text" --arg tooltip "$tooltip" '{text: $text, tooltip: $tooltip}'

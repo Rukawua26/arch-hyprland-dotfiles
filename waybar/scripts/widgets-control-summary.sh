@@ -19,6 +19,6 @@ for capacity in /sys/class/power_supply/BAT*/capacity; do
     break
 done
 
-text=" ${volume}%    󰃠 ${brightness}%     ${battery}%"
+text="<span foreground=\"#ff79c6\"> ${volume}%</span>    <span foreground=\"#f1fa8c\">󰃠 ${brightness}%</span>    <span foreground=\"#50fa7b\"> ${battery}%</span>"
 tooltip="Volumen ${volume}%\nBrillo ${brightness}%\nBateria ${battery}%\nClick: mezclador de volumen"
 jq -cn --arg text "$text" --arg tooltip "$tooltip" '{text: $text, tooltip: $tooltip}'

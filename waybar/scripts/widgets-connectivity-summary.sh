@@ -29,6 +29,6 @@ if command -v bluetoothctl >/dev/null 2>&1; then
     fi
 fi
 
-text="$wifi    $bt"
+text="<span foreground=\"#8be9fd\">$wifi</span>    <span foreground=\"#bd93f9\">$bt</span>"
 tooltip="$wifi_tip\n$bt_tip\nClick: Wi-Fi | Click derecho: Bluetooth"
 jq -cn --arg text "$text" --arg tooltip "$tooltip" '{text: $text, tooltip: $tooltip}'
