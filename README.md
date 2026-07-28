@@ -2,7 +2,7 @@
 
 Configuración personal de Hyprland para mi PC, con estética neon cyan/lila, centro de control Waybar, alertas de batería y widgets integrados. Todo hecho a mi medida y con mis reglas.
 
-![Screenshot](./screenshot.png)
+![Arch Hyprland futuristic preview](./preview.png)
 
 ## Features
 
