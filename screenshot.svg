@@ -1,0 +1,132 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1000" viewBox="0 0 1600 1000">
+  <defs>
+    <radialGradient id="nebula" cx="50%" cy="42%" r="72%">
+      <stop offset="0%" stop-color="#ff2f8f" stop-opacity="0.74"/>
+      <stop offset="24%" stop-color="#7b2cff" stop-opacity="0.46"/>
+      <stop offset="58%" stop-color="#07132f" stop-opacity="0.96"/>
+      <stop offset="100%" stop-color="#05060c" stop-opacity="1"/>
+    </radialGradient>
+    <linearGradient id="panel" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#211a2e" stop-opacity="0.94"/>
+      <stop offset="1" stop-color="#090912" stop-opacity="0.96"/>
+    </linearGradient>
+    <linearGradient id="cyanLine" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#00f7ff" stop-opacity="0"/>
+      <stop offset="0.5" stop-color="#00f7ff" stop-opacity="0.95"/>
+      <stop offset="1" stop-color="#bd93f9" stop-opacity="0"/>
+    </linearGradient>
+    <filter id="glow" x="-80%" y="-80%" width="260%" height="260%">
+      <feGaussianBlur stdDeviation="5" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="softGlow" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="14" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <pattern id="grid" width="80" height="80" patternUnits="userSpaceOnUse">
+      <path d="M80 0H0V80" fill="none" stroke="#00aaff" stroke-opacity="0.12" stroke-width="1"/>
+    </pattern>
+    <pattern id="micro" width="28" height="28" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1.6" fill="#00f7ff" fill-opacity="0.22"/>
+    </pattern>
+  </defs>
+
+  <rect width="1600" height="1000" fill="#05060c"/>
+  <rect width="1600" height="1000" fill="url(#nebula)"/>
+  <rect width="1600" height="1000" fill="url(#grid)"/>
+  <rect width="1600" height="1000" fill="url(#micro)" opacity="0.5"/>
+
+  <g opacity="0.78" filter="url(#glow)">
+    <path d="M0 118H145l36 34h184l34-34h252l42 43h210l36-43h188l40 40h433" fill="none" stroke="#006dff" stroke-width="4"/>
+    <path d="M0 872h220l48-48h176l36 36h268l62-62h176l56 56h558" fill="none" stroke="#006dff" stroke-width="4"/>
+    <path d="M55 255h270v56h-86v54h245v-93h166" fill="none" stroke="#00f7ff" stroke-opacity="0.56" stroke-width="2"/>
+    <path d="M1545 255h-270v56h86v54h-245v-93H950" fill="none" stroke="#00f7ff" stroke-opacity="0.56" stroke-width="2"/>
+    <path d="M154 650h210v-86h164v160h-76v90" fill="none" stroke="#006dff" stroke-opacity="0.58" stroke-width="3"/>
+    <path d="M1446 650h-210v-86h-164v160h76v90" fill="none" stroke="#006dff" stroke-opacity="0.58" stroke-width="3"/>
+  </g>
+
+  <g opacity="0.34">
+    <path d="M800 152c-172 0-312 140-312 312s140 312 312 312 312-140 312-312S972 152 800 152z" fill="none" stroke="#bd93f9" stroke-width="2"/>
+    <path d="M800 212c-139 0-252 113-252 252s113 252 252 252 252-113 252-252S939 212 800 212z" fill="none" stroke="#00f7ff" stroke-width="2"/>
+    <path d="M800 292c-95 0-172 77-172 172s77 172 172 172 172-77 172-172S895 292 800 292z" fill="none" stroke="#ff2f8f" stroke-width="2"/>
+  </g>
+
+  <g transform="translate(800 486)" filter="url(#softGlow)">
+    <path d="M0-310 248 302 74 194 0 20-74 194-248 302z" fill="#08111f" fill-opacity="0.74" stroke="#00f7ff" stroke-width="5"/>
+    <path d="M0-240 156 175 60 118 0-48-60 118-156 175z" fill="#00f7ff" fill-opacity="0.14" stroke="#bd93f9" stroke-width="2"/>
+    <path d="M0-108 34 10 118 132 58 118 0 0-58 118-118 132-34 10z" fill="#ff2f8f" fill-opacity="0.48"/>
+    <text x="0" y="272" text-anchor="middle" font-family="JetBrainsMono Nerd Font, monospace" font-size="34" font-weight="800" fill="#e6dcff" letter-spacing="8">ARCH // HYPRLAND</text>
+    <text x="0" y="315" text-anchor="middle" font-family="JetBrainsMono Nerd Font, monospace" font-size="17" font-weight="700" fill="#00f7ff" letter-spacing="5">MIGUEL CUSTOM NEON DESKTOP</text>
+  </g>
+
+  <g opacity="0.62">
+    <ellipse cx="800" cy="642" rx="235" ry="64" fill="#000000" opacity="0.34"/>
+    <path d="M642 668c22-106 79-162 158-162s136 56 158 162c-45 61-271 61-316 0z" fill="#9bbcff" fill-opacity="0.13" stroke="#8be9fd" stroke-opacity="0.26"/>
+    <circle cx="800" cy="442" r="116" fill="#b7d7ff" fill-opacity="0.12" stroke="#8be9fd" stroke-opacity="0.24"/>
+    <circle cx="800" cy="438" r="68" fill="#ff2f8f" fill-opacity="0.54" filter="url(#glow)"/>
+    <path d="M756 438c18-36 70-36 88 0-18 30-70 30-88 0z" fill="#bd93f9" fill-opacity="0.34"/>
+  </g>
+
+  <g transform="translate(1284 98)" font-family="JetBrainsMono Nerd Font, monospace" filter="url(#glow)">
+    <rect x="0" y="0" width="244" height="34" rx="17" fill="url(#panel)" stroke="#bd93f9" stroke-opacity="0.42"/>
+    <g fill="#cdd6f4" font-size="13" font-weight="800">
+      <text x="28" y="22">1</text><text x="56" y="22">2</text><text x="84" y="22">3</text>
+      <circle cx="116" cy="17" r="14" fill="#bd93f9"/><text x="112" y="22" fill="#0d0d0d">4</text>
+      <text x="140" y="22">5</text><text x="168" y="22">6</text><text x="196" y="22">7</text><text x="224" y="22">8</text>
+    </g>
+
+    <g transform="translate(8 46)">
+      <rect x="0" y="0" width="42" height="32" rx="16" fill="#14101d" stroke="#6a5b89"/>
+      <text x="21" y="22" text-anchor="middle" font-size="15" fill="#6a5b89">OFF</text>
+      <rect x="58" y="0" width="42" height="32" rx="16" fill="#14101d" stroke="#00f7ff"/>
+      <text x="79" y="22" text-anchor="middle" font-size="17" fill="#00f7ff">Wi</text>
+      <rect x="116" y="0" width="42" height="32" rx="16" fill="#14101d" stroke="#bd93f9"/>
+      <text x="137" y="22" text-anchor="middle" font-size="17" fill="#bd93f9">BT</text>
+      <rect x="174" y="0" width="42" height="32" rx="16" fill="#14101d" stroke="#f1fa8c"/>
+      <text x="195" y="22" text-anchor="middle" font-size="17" fill="#f1fa8c">MIC</text>
+    </g>
+
+    <g transform="translate(-30 94)">
+      <rect x="0" y="0" width="300" height="60" rx="14" fill="url(#panel)" stroke="#bd93f9" stroke-opacity="0.6"/>
+      <text x="150" y="39" text-anchor="middle" font-size="25" font-weight="900" fill="#f5edff">07:45</text>
+    </g>
+    <g transform="translate(-30 170)">
+      <rect x="0" y="0" width="300" height="28" rx="12" fill="url(#panel)" stroke="#bd93f9" stroke-opacity="0.42"/>
+      <text x="150" y="19" text-anchor="middle" font-size="12" fill="#bd93f9">martes, 28 julio 2026</text>
+    </g>
+    <g transform="translate(-30 212)">
+      <rect x="0" y="0" width="300" height="168" rx="14" fill="url(#panel)" stroke="#bd93f9" stroke-opacity="0.54"/>
+      <text x="150" y="32" text-anchor="middle" font-size="14" fill="#cdd6f4">agosto 2026</text>
+      <text x="150" y="58" text-anchor="middle" font-size="12" fill="#8be9fd">lu ma mi ju vi sa do</text>
+      <text x="150" y="88" text-anchor="middle" font-size="13" fill="#e6dcff">3  4  5  6  7  8  9</text>
+      <text x="150" y="114" text-anchor="middle" font-size="13" fill="#e6dcff">10 11 12 13 14 15 16</text>
+      <text x="150" y="140" text-anchor="middle" font-size="13" fill="#e6dcff">17 18 19 20 21 22 23</text>
+    </g>
+    <g transform="translate(-30 398)">
+      <rect x="0" y="0" width="300" height="46" rx="14" fill="url(#panel)" stroke="#00f7ff" stroke-opacity="0.35"/>
+      <text x="50" y="29" text-anchor="middle" font-size="16" fill="#f1fa8c">CPU 23%</text>
+      <text x="150" y="29" text-anchor="middle" font-size="16" fill="#ffb86c">RAM 68%</text>
+      <text x="250" y="29" text-anchor="middle" font-size="16" fill="#ff4757">27C</text>
+    </g>
+    <g transform="translate(-30 456)">
+      <rect x="0" y="0" width="300" height="46" rx="14" fill="url(#panel)" stroke="#bd93f9" stroke-opacity="0.35"/>
+      <text x="72" y="29" text-anchor="middle" font-size="16" fill="#ff79c6">VOL 62%</text>
+      <text x="168" y="29" text-anchor="middle" font-size="16" fill="#f1fa8c">MIC 10%</text>
+      <text x="254" y="29" text-anchor="middle" font-size="16" fill="#50fa7b">BAT 21%</text>
+    </g>
+    <g transform="translate(-30 514)">
+      <rect x="0" y="0" width="300" height="38" rx="14" fill="url(#panel)" stroke="#bd93f9" stroke-opacity="0.35"/>
+      <text x="150" y="25" text-anchor="middle" font-size="15" fill="#8be9fd">ES</text>
+    </g>
+  </g>
+
+  <rect x="0" y="0" width="1600" height="1000" fill="none" stroke="#00f7ff" stroke-opacity="0.26" stroke-width="6"/>
+  <path d="M0 64h140M1460 64h140M0 936h140M1460 936h140" stroke="#00f7ff" stroke-width="5" stroke-linecap="round" filter="url(#glow)"/>
+  <rect x="34" y="34" width="1532" height="932" rx="28" fill="none" stroke="url(#cyanLine)" stroke-width="2" opacity="0.72"/>
+</svg>
