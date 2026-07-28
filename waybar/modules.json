@@ -1,4 +1,12 @@
 {
+  "custom/idle": {
+    "format": "{}",
+    "exec": "~/.config/waybar/scripts/idle-toggle.sh",
+    "interval": 5,
+    "return-type": "json",
+    "tooltip": true,
+    "on-click": "~/.config/waybar/scripts/idle-toggle.sh toggle"
+  },
   "custom/arch": {
     "format": "󰣇",
     "tooltip": true,

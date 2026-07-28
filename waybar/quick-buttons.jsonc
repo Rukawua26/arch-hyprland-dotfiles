@@ -10,6 +10,7 @@
     "modules-left": [],
     "modules-center": [],
     "modules-right": [
+        "custom/idle",
         "custom/widget-wifi",
         "custom/widget-bluetooth",
         "custom/widget-mic"

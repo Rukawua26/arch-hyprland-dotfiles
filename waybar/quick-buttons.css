@@ -13,7 +13,8 @@ window#waybar {
 
 #custom-widget-wifi,
 #custom-widget-bluetooth,
-#custom-widget-mic {
+#custom-widget-mic,
+#custom-idle {
     min-width: 34px;
     min-height: 34px;
     margin: 0 0 0 10px;
@@ -47,9 +48,20 @@ window#waybar {
     border-color: transparent;
 }
 
+#custom-idle {
+    color: #6a5b89;
+    border-color: rgba(106, 91, 137, 0.38);
+}
+
+#custom-idle.active {
+    color: #50fa7b;
+    border-color: rgba(80, 250, 123, 0.38);
+}
+
 #custom-widget-wifi:hover,
 #custom-widget-bluetooth:hover,
-#custom-widget-mic:hover {
+#custom-widget-mic:hover,
+#custom-idle:hover {
     background: linear-gradient(180deg, rgba(58, 48, 76, 0.98), rgba(30, 25, 42, 0.98));
     border-color: rgba(216, 180, 254, 0.58);
     box-shadow:
